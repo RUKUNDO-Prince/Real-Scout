@@ -7,9 +7,14 @@ const tokens = (n) => {
 
 describe('Escrow', () => {
     it("saves the addresses", async () => {
+        const signers = await ethers.getSigners();
+        console.log(signers);
+        
+        // DEPLOY REAL-ESTATE
         const RealEstate = await ethers.getContractFactory("RealEstate");
         realEstate = await RealEstate.deploy();
 
-        console.log(realEstate.address);
+        // MINT
+        let transaction = await realEstate.mint("https://ipfs.io/ipfs/QmTudSYeM7mz3PkYEWXWqPjomRPHogcMFSq7XAvsvsgAPS");
     });
 })
