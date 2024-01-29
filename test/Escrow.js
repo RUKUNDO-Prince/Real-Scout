@@ -144,8 +144,12 @@ describe('Escrow', () => {
             await transaction.wait();
         });
 
-        it("Works", async () => {
+        it("Updates Ownership", async () => {
+            expect(await realEstate.ownerOf(1)).to.be.equal(buyer.address);
+        });
 
+        it("Updates Balance", async () => {
+            expect(await escrow.getBalance()).to.be.equal(0);
         });
     });
 
