@@ -5,7 +5,7 @@ import { useAppwrite } from "./useAppwrite";
 import { Redirect } from "expo-router";
 
 interface GlobalContextType {
-  isLoggedIn: boolean;
+  isLogged: boolean;
   user: User | null;
   loading: boolean;
   refetch: () => void;
@@ -14,7 +14,7 @@ interface GlobalContextType {
 interface User {
   $id: string;
   name: string;
-  email: string;
+  email: string; 
   avatar: string;
 }
 
