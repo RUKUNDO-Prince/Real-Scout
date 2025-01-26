@@ -34,7 +34,7 @@ export default function Index() {
                     Good Morning
                   </Text>
                   <Text className="text-base font-rubik-medium text-black-300">
-                    {user?.name}
+                    {user?.name || "Guest"}
                   </Text>
                 </View>
               </View>
