@@ -25,7 +25,7 @@ export default function Index() {
     params: {
       filter: params.filter!,
       query: params.query!,
-      limit: 6
+      limit: 8
     },
     skip: true,
   });
@@ -34,7 +34,7 @@ export default function Index() {
     refetch({
       filter: params.filter!,
       query: params.query!,
-      limit: 6
+      limit: 8
     });
   }, [params.filter, params.query]);
 
